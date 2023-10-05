@@ -1,0 +1,30 @@
+public class Candy implements Sweets {
+
+    String name;
+    int weight;
+    int price;
+    String uniqueParameter;
+
+    public Candy(String name, int weight, int price, String uniqueParameter){
+        this.name = name;
+        this.weight =  weight;
+        this.price = price;
+        this.uniqueParameter = uniqueParameter;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getUniqueParameter() {
+        return uniqueParameter;
+    }
+}
