@@ -29,28 +29,28 @@ public class SweetGift {
 
             switch (choice) {
                 case "1" -> {
-                    Candy candyChocoLap = new Candy("Конфеты \"CHOCO-LAPKI\"", 200, 437, "Прямоугольные");
+                    Candy candyChocoLap = new Candy("Конфеты \"CHOCO-LAPKI\"", 200, 437, "Страна производства - Польша");
                     sweets.add(candyChocoLap);
                     totalWeight += candyChocoLap.getWeight();
                     totalPrice += candyChocoLap.getPrice();
                     System.out.println("Конфеты \"CHOCO-LAPKI\" добавлены в подарок");
                 }
                 case "2" -> {
-                    Jellybean funnyBalls = new Jellybean("Желейные шарики \"Смешные шарики\"", 59, 78, "Круглые");
+                    Jellybean funnyBalls = new Jellybean("Желейные шарики \"Смешные шарики\"", 59, 78, "Калорийность - 84 ккал на 100 г.");
                     sweets.add(funnyBalls);
                     totalWeight += funnyBalls.getWeight();
                     totalPrice += funnyBalls.getPrice();
                     System.out.println("Желейные шарики \"Смешные шарики\" добавлены в подарок");
                 }
                 case "3" -> {
-                    Candy candyLev = new Candy("Конфеты \"Лёвушка\"", 119, 186, "Овальные");
+                    Candy candyLev = new Candy("Конфеты \"Лёвушка\"", 119, 186, "Страна производства - Россия");
                     sweets.add(candyLev);
                     totalWeight += candyLev.getWeight();
                     totalPrice += candyLev.getPrice();
                     System.out.println("Конфеты \"Лёвушка\" добавлены в подарок");
                 }
                 case "4" -> {
-                    Lollypop chupaChups = new Lollypop("Леденец \"Чупа-чупс\"", 99, 123, "Круглый на палочке");
+                    Lollypop chupaChups = new Lollypop("Леденец \"Чупа-чупс\"", 99, 123, "Вкус - мятный");
                     sweets.add(chupaChups);
                     totalWeight += chupaChups.getWeight();
                     totalPrice += chupaChups.getPrice();
