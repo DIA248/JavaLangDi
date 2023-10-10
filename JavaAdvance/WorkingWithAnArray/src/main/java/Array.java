@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Array {
     private final int[] numbers;
 
@@ -24,9 +26,7 @@ public class Array {
      */
     public void arrayDisplay() {
         System.out.println("Массив:");
-        for(int i = 0; i < 20; i++) {
-            System.out.println("" + i + " \t " + this.numbers[i]);
-        }
+            System.out.println(Arrays.toString(numbers));
     }
 
     /**
@@ -37,7 +37,7 @@ public class Array {
         int currentInt = this.numbers[0];
         int currentIndex = 0;
         for(int i = 1; i < 20; i++) {
-            if ((this.numbers[i] < 0 && this.numbers[i] < currentInt) || currentInt >= 0) {
+            if ((this.numbers[i] < 0 && this.numbers[i] > currentInt) || currentInt >= 0) {
                 currentInt = this.numbers[i];
                 currentIndex = i;
             }
