@@ -10,7 +10,7 @@ public class Main {
         num1 = in.nextDouble();
         System.out.println("Введите второе число: ");
         num2 = in.nextDouble();
-        System.out.print("\nВведите оператор (+, -, *, /, log: ");
+        System.out.print("\nВведите оператор (+, -, *, /, log): ");
         String operator = in.next();
         Calculator calculator = new Calculator();
         System.out.printf("Результат операции: %.4f\n", calculator.performOperation(operator, num1, num2));
