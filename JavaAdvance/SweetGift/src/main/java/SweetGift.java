@@ -12,8 +12,8 @@ public class SweetGift {
     public static void giftFormation() throws IOException {
         ArrayList<Sweets> sweets = new ArrayList<>();
         boolean formed = false;
-        int totalPrice = 0;
-        int totalWeight = 0;
+        double totalPrice = 0;
+        double totalWeight = 0;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("""
                 Из каких сладостей Вы хотите собрать подарок:\s
@@ -29,28 +29,28 @@ public class SweetGift {
 
             switch (choice) {
                 case "1" -> {
-                    Candy candyChocoLap = new Candy("Конфеты \"CHOCO-LAPKI\"", 200, 437, "Страна производства - Польша");
+                    Candy candyChocoLap = new Candy("\"CHOCO-LAPKI\"", 200.66, 437.45, "Польша");
                     sweets.add(candyChocoLap);
                     totalWeight += candyChocoLap.getWeight();
                     totalPrice += candyChocoLap.getPrice();
                     System.out.println("Конфеты \"CHOCO-LAPKI\" добавлены в подарок");
                 }
                 case "2" -> {
-                    Jellybean funnyBalls = new Jellybean("Желейные шарики \"Смешные шарики\"", 59, 78, "Калорийность - 84 ккал на 100 г.");
+                    Jellybean funnyBalls = new Jellybean("\"Смешные шарики\"", 59.32, 78.56,  84.75);
                     sweets.add(funnyBalls);
                     totalWeight += funnyBalls.getWeight();
                     totalPrice += funnyBalls.getPrice();
                     System.out.println("Желейные шарики \"Смешные шарики\" добавлены в подарок");
                 }
                 case "3" -> {
-                    Candy candyLev = new Candy("Конфеты \"Лёвушка\"", 119, 186, "Страна производства - Россия");
+                    Candy candyLev = new Candy("\"Лёвушка\"", 119.97, 186.76, "Россия");
                     sweets.add(candyLev);
                     totalWeight += candyLev.getWeight();
                     totalPrice += candyLev.getPrice();
                     System.out.println("Конфеты \"Лёвушка\" добавлены в подарок");
                 }
                 case "4" -> {
-                    Lollypop chupaChups = new Lollypop("Леденец \"Чупа-чупс\"", 99, 123, "Вкус - мятный");
+                    Lollypop chupaChups = new Lollypop("\"Чупа-чупс\"", 99.23, 123.65, 6);
                     sweets.add(chupaChups);
                     totalWeight += chupaChups.getWeight();
                     totalPrice += chupaChups.getPrice();
@@ -59,15 +59,14 @@ public class SweetGift {
                 case "5" -> formed = true;
             }
 
-
         }
         int count = 0;
         System.out.println("\nИнформация о всех сладостях в подарке:");
         for (Sweets sweet:sweets) {
             count++;
-            System.out.println(count + ". " + sweet.getName() + " - " + sweet.getUniqueParameter());
+            System.out.println(count + ". " + sweet);
         }
-        System.out.printf("\nОбщий вес подарка: %s гр.\nОбщая стоимость подарка: %s руб.%n", totalWeight, totalPrice);
+        System.out.printf("\nОбщий вес подарка: %.4f гр.\nОбщая стоимость подарка: %.4f руб.%n", totalWeight, totalPrice);
     }
 
 }

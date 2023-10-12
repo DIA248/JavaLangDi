@@ -1,31 +1,24 @@
-public class Jellybean implements Sweets {
+public class Jellybean extends Sweets {
 
-    String name;
-    int weight;
-    int price;
-    String uniqueParameter;
+    private double caloricContent;
 
-    public Jellybean(String name, int weight, int price, String uniqueParameter) {
-        this.name = name;
-        this.weight = weight;
-        this.price = price;
-        this.uniqueParameter = uniqueParameter;
+
+    public Jellybean(String name, double weight, double price, double caloricContent) {
+        super(name, weight, price);
+        this.caloricContent = caloricContent;
     }
 
-    public String getName() {
-        return name;
+    public Double getCaloricContent() {
+        return caloricContent;
     }
 
-    public int getWeight() {
-        return weight;
+    public void setCaloricContent(double caloricContent) {
+        this.caloricContent = caloricContent;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public String getUniqueParameter() {
-        return uniqueParameter;
+    @Override
+    public String toString(){
+        return "Желейные шарики: " + super.toString() + ", Калорийность: " + caloricContent;
     }
 
 }

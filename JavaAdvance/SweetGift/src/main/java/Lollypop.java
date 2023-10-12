@@ -1,31 +1,22 @@
-public class Lollypop implements Sweets{
+public class Lollypop extends Sweets {
 
-    String name;
-    int weight;
-    int price;
-    String uniqueParameter;
+    private int diameterOfLollipop;
 
-    public Lollypop(String name, int weight, int price, String uniqueParameter){
-        this.name = name;
-        this.weight =  weight;
-        this.price = price;
-        this.uniqueParameter = uniqueParameter;
+    public Lollypop (String name, double weight, double price, int diameterOfLollipop) {
+        super(name, weight, price);
+        this.diameterOfLollipop = diameterOfLollipop;
     }
 
-    public String getName() {
-        return name;
+    public int getDiameterOfLollipop() {
+        return diameterOfLollipop;
     }
 
-    public int getWeight() {
-        return weight;
+    public void setDiameterOfLollipop(int diameterOfLollipop) {
+        this.diameterOfLollipop = diameterOfLollipop;
     }
 
-    public int getPrice() {
-        return price;
+    @Override
+    public String toString(){
+        return "Леденец: " + super.toString() + ", Диаметр леденца в сантиметрах: " + diameterOfLollipop;
     }
-
-    public String getUniqueParameter() {
-        return uniqueParameter;
-    }
-
 }

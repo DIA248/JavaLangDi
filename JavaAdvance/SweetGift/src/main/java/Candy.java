@@ -1,30 +1,24 @@
-public class Candy implements Sweets {
+public class Candy extends Sweets {
 
-    String name;
-    int weight;
-    int price;
-    String uniqueParameter;
 
-    public Candy(String name, int weight, int price, String uniqueParameter){
-        this.name = name;
-        this.weight =  weight;
-        this.price = price;
-        this.uniqueParameter = uniqueParameter;
+    String countryOfManufacture;
+
+    public Candy(String name, double weight, double price, String countryOfManufacture){
+        super(name, weight, price);
+        this.countryOfManufacture = countryOfManufacture;
     }
 
-    public String getName() {
-        return name;
+    public String getCountryOfManufacture() {
+        return countryOfManufacture;
     }
 
-    public int getWeight() {
-        return weight;
+    public void setCountryOfManufacture(String countryOfManufacture) {
+        this.countryOfManufacture = countryOfManufacture;
     }
 
-    public int getPrice() {
-        return price;
+    @Override
+    public String toString(){
+        return "Конфеты: " + super.toString() + ", Страна производства - " + countryOfManufacture;
     }
 
-    public String getUniqueParameter() {
-        return uniqueParameter;
-    }
 }
