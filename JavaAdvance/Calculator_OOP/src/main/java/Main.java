@@ -30,8 +30,10 @@ public class Main {
             System.out.printf("Результат операции: %.4f\n", calculator.performOperation(operator, num1, num2));
         } catch (ArithmeticException | IllegalArgumentException e) {
             System.out.println(e.getMessage());
-        } catch (InputMismatchException e2) {
-            System.out.println("Exception: Некорректный ввод данных");
+        } catch (InputMismatchException e) {
+            System.out.println("Exception: Некорректный ввод числа");
+        } catch (NullPointerException e) {
+            System.out.println("Exception: Введен некорректный оператор");
         }
     }
 }
