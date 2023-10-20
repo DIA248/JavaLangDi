@@ -15,8 +15,13 @@ public class Calculator {
         operationMap.put("log", new LogarithmOperation());
     }
 
+
     public double performOperation(String operation, double a, double b) {
         Operation selectedOperation = operationMap.get(operation);
+        if (selectedOperation != null) {
             return selectedOperation.performTheOperation(a, b);
+        } else {
+            throw new IllegalArgumentException("Введен некорректный оператор: " + operation);
+        }
     }
 }
